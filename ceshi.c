@@ -49,12 +49,12 @@
 #include<stdlib.h> 
 #include<conio.h>
 #include<windows.h>
-//¶¨Òå
-int position_x,position_y;//·É»ú×ø±ê
-int high,width;//¿ò¼Ü
-int bullet_x,bullet_y;//×Óµ¯Î»ÖÃ
-int enemy_x,enemy_y;//µÐ»ú
-void startup()//Êý¾Ý³õÊ¼»¯
+//ï¿½ï¿½ï¿½ï¿½
+int position_x,position_y;//ï¿½É»ï¿½ï¿½ï¿½ï¿½ï¿½
+int high,width;//ï¿½ï¿½ï¿½
+int bullet_x,bullet_y;//ï¿½Óµï¿½Î»ï¿½ï¿½
+int enemy_x,enemy_y;//ï¿½Ð»ï¿½
+void startup()
 {
 	high=18;
 	width=30;
@@ -65,29 +65,29 @@ void startup()//Êý¾Ý³õÊ¼»¯
 	enemy_x=0;
 	enemy_y=width/2;
  } 
-void show()       // ÏÔÊ¾
+void show()       // ï¿½ï¿½Ê¾
 {
 	int i,j;
-	system("cls");//ÇåÆÁ
+	system("cls");//ï¿½ï¿½ï¿½ï¿½
 	for(i=0;i<high;i++)
 	{
 		for(j=0;j<width;j++)
 		{
 			if(i==position_x&&j==position_y)
-				printf("*");//ÏÔÊ¾·É»ú 
+				printf("*");//ï¿½ï¿½Ê¾ï¿½É»ï¿½ 
 			else if(i==bullet_x&&j==bullet_y)
-				printf("|");//Êä³ö×Óµ¯
+				printf("|");//ï¿½ï¿½ï¿½ï¿½Óµï¿½
 			else if(i==enemy_x&&j==enemy_y)
-				printf("$");//Êä³öµÐ»ú
+				printf("$");//ï¿½ï¿½ï¿½ï¿½Ð»ï¿½
 			else 
-			printf(" ");//Êä³ö¿Õ¸ñ
+			printf(" ");//ï¿½ï¿½ï¿½ï¿½Õ¸ï¿½
 			
 		}
-		printf("\n");//×ªÖÁÏÂÒ»ÐÐ
+		printf("\n");//×ªï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½
 		
 	}
 }
-void updatewithoutinput()//¸üÐÂÎÞ¹ØÊä³öµÄÄÚÈÝ 
+void updatewithoutinput()//ï¿½ï¿½ï¿½ï¿½ï¿½Þ¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
 {
 	if(bullet_x>-1)
 		bullet_x--;
@@ -115,10 +115,10 @@ void updatewithoutinput()//¸üÐÂÎÞ¹ØÊä³öµÄÄÚÈÝ
 	
 
 }
-void updatewithinput()//¸üÐÂÓÐ¹ØÊäÈëµÄÄÚÈÝ
+void updatewithinput()//ï¿½ï¿½ï¿½ï¿½ï¿½Ð¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 {
 	char input; 
-	if(_kbhit())//µ±°´¼üÊ±Ö´ÐÐ
+	if(_kbhit())//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±Ö´ï¿½ï¿½
 	{
 		input=getch();
 		if(input=='a')
